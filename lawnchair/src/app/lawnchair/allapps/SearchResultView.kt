@@ -42,7 +42,7 @@ sealed interface SearchResultView {
 
     fun shouldHandleClick(targetCompat: SearchTargetCompat): Boolean {
         val packageName = targetCompat.packageName
-        return (packageName in listOf(START_PAGE, MARKET_STORE, SUGGESTION, CONTACT, FILES)) &&
+        return (packageName in listOf(MARKET_STORE, SUGGESTION, CONTACT, FILES)) &&
             targetCompat.layoutType != LayoutType.SMALL_ICON_HORIZONTAL_TEXT &&
             targetCompat.resultType != SearchTargetCompat.RESULT_TYPE_SHORTCUT
     }
